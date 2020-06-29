@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/splashFragment">
+
+    <fragment android:id="@+id/splashFragment"
+        android:name="com.bhanu.smsanalyzer.ui.SplashFragment"
+        tools:layout="@layout/fragment_splash"
+        android:label="splash_fragment">
+        <action android:id="@+id/splashFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+    <fragment android:id="@+id/dashboardFragment"
+        android:name="com.bhanu.smsanalyzer.ui.DashboardFragment"
+        tools:layout="@layout/fragment_dashboard"
+        android:label="dashboard_fragment">
+        <action android:id="@+id/dashboardFragment_to_tabFragment"
+            app:destination="@id/tabFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+    </fragment>
+
+    <fragment android:id="@+id/tabFragment"
+        android:name="com.bhanu.smsanalyzer.ui.TabsFragment"
+        tools:layout="@layout/fragment_dashboard"
+        android:label="dashboard_fragment"/>
+
+</navigation>
